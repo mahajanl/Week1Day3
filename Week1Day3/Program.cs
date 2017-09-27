@@ -68,31 +68,56 @@ namespace Week1Day3
             //    Console.WriteLine("That is definitely not your age.");
             //}
 
-            Console.WriteLine("How many points have you earned?");
+            //Console.WriteLine("How many points have you earned?");
 
-            int pointsEarned = int.Parse(Console.ReadLine());
+            //int pointsEarned = int.Parse(Console.ReadLine());
 
-            switch (pointsEarned)
+            //switch (pointsEarned)
+            //{
+            //    case 0:
+            //        Console.WriteLine("You have no points :(");
+            //        break;
+            //    case 1:
+            //        Console.WriteLine("You should probably practice a bit more.");
+            //        break;
+            //    case 2:
+            //        Console.WriteLine("Not too bad, but I think you could do better.");
+            //        break;
+            //    case 3:
+            //        Console.WriteLine("Nice!");
+            //        break;
+            //    case 4:
+            //        Console.WriteLine("Way to go! I wrote this thing and I'm not that good.");
+            //        break;
+            //    case 5:
+            //        Console.WriteLine("I think you're the new Master of the Game. I bow to you.");
+            //        break;
+            //}
+
+            Console.WriteLine("How many people are in your party?");
+            int people = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("How much was each person's bill?");
+            int billPerPerson = int.Parse(Console.ReadLine());
+
+            int billTotal = billPerPerson * people;
+            double newBill;
+
+            if(billTotal >= 50)
             {
-                case 0:
-                    Console.WriteLine("You have no points :(");
-                    break;
-                case 1:
-                    Console.WriteLine("You should probably practice a bit more.");
-                    break;
-                case 2:
-                    Console.WriteLine("Not too bad, but I think you could do better.");
-                    break;
-                case 3:
-                    Console.WriteLine("Nice!");
-                    break;
-                case 4:
-                    Console.WriteLine("Way to go! I wrote this thing and I'm not that good.");
-                    break;
-                case 5:
-                    Console.WriteLine("I think you're the new Master of the Game. I bow to you.");
-                    break;
+                newBill = billTotal * .9;
+                Console.WriteLine("The discounted total is $" + newBill);
+                    }
+
+            else
+            {
+                newBill = billTotal * .95;
+                Console.WriteLine("The discounted total is $" + newBill);
             }
+
+
+            //Console.WriteLine("The total bill for the whole party was " + "$" + billTotal);
+
         }
     }
 }
